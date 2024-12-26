@@ -234,7 +234,7 @@ export DEEPSEEK_API_KEY=<your token>
 import gradio as gr
 import ai_gradio
 
-interface = gr.load(
+gr.load(
     name='deepseek:deepseek-chat',
     src=ai_gradio.registry,
 ).launch()
