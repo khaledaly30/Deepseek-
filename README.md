@@ -222,6 +222,24 @@ You can chat with DeepSeek-V3 on DeepSeek's official website: [chat.deepseek.com
 
 We also provide OpenAI-Compatible API at DeepSeek Platform: [platform.deepseek.com](https://platform.deepseek.com/)
 
+Deploy a chat interface with the API and Gradio in a few lines of code
+
+```bash
+pip install 'ai-gradio[deepseek]'
+
+export DEEPSEEK_API_KEY=<your token>
+```
+
+```python
+import gradio as gr
+import ai_gradio
+
+gr.load(
+    name='deepseek:deepseek-chat',
+    src=ai_gradio.registry,
+).launch()
+```
+
 ## 6. How to Run Locally
 
 DeepSeek-V3 can be deployed locally using the following hardware and open-source community software:
